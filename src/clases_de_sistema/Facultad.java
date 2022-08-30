@@ -3,8 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package clases_de_sistema;
 
+
+import java.sql.Connection;
+import java.sql.SQLException;
 /**
  *
  * @author olgt1
@@ -13,6 +18,7 @@ public class Facultad {
     private String id;
     private String nombre;
     private Curso cursos[];
+    private Connection miconexion;
 
     public String getId() {
         return id;
@@ -42,4 +48,27 @@ public class Facultad {
         this.id = null;
         this.nombre = null;
     }
+    
+    public void CrearFacultadDB(/*parametros formulario*/){
+        //crear mi inserciion en la DB 
+        try {
+            miconexion = linkDB.getConnection();
+            if (miconexion != null){
+                //insercion
+                
+                
+                
+                
+                miconexion.close();
+            }
+            
+        } catch (SQLException e) {
+            
+            //alternativa
+        }
+        
+        
+        
+    }
+    
 }

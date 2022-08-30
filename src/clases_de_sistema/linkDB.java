@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package desktop_login;
+package clases_de_sistema;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -11,12 +11,13 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author olgt1
+ * @author fly10
  */
-public class Conexion {
- 
+public class linkDB {
+    //parametros
+    
     private static Connection conn = null;
-    public static String login = "UMG";
+    public  static String login = "UMG";
     private static  String clave = "123456";
     private static String url= "jdbc:oracle:thin:@localhost:1521:xe";
     
@@ -24,10 +25,10 @@ public class Conexion {
         return this.conn;
     }
     
-    public Connection getConnection(String p_login, String p_clave) throws SQLException{
+    public static Connection getConnection() throws SQLException{
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn= DriverManager.getConnection(url, p_login, p_clave);
+            conn= DriverManager.getConnection(url, login, clave);
             conn.setAutoCommit(false);
             if(conn != null){
                 JOptionPane.showMessageDialog (null, "Conexion exitosa");
@@ -42,11 +43,20 @@ public class Conexion {
         return conn;
     }
     
-        public void desconexion(){
+        public static void desconexion(){
         try{
             conn.close();
         } catch(SQLException e){
             JOptionPane.showMessageDialog (null, "error al desconectra" + e.getMessage());
         }
     }
+    
+    
+    
+    
+    
+    public static void conectarDB(){
+    
+    }
+    
 }

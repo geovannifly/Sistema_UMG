@@ -10,7 +10,7 @@ package clases_de_sistema;
  * @author olgt1
  */
 public class Representante_Legal extends Persona{
-    private String id;
+    public String id;
     private String titulo;
 
     public String getId() {
