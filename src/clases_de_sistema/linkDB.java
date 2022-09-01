@@ -18,7 +18,7 @@ public class linkDB {
     
     private static Connection conn = null;
     public  static String login = "UMG";
-    private static  String clave = "123456";
+    public static  String clave = "123456";
     private static String url= "jdbc:oracle:thin:@localhost:1521:xe";
     
     public Connection getExistingConnection(){
@@ -40,6 +40,7 @@ public class linkDB {
             
             JOptionPane.showMessageDialog(null, "Error de conexion " + e.getMessage());
         }
+        System.out.println("salgo de get connection con : " + conn.toString());
         return conn;
     }
     

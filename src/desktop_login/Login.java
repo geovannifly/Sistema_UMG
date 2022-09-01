@@ -6,6 +6,7 @@
 package desktop_login;
 
 import clases_de_sistema.Representante_Legal;
+import clases_de_sistema.linkDB;
 import formularios.Formulario_Admin_Estudiantes;
 import formularios.Panel_Principal_Admin;
 import java.lang.System.*;
@@ -171,9 +172,8 @@ public class Login extends javax.swing.JFrame {
     private void ConexionDBButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConexionDBButtonActionPerformed
         // TODO add your handling code here:
         
-        //Conexion c = new Conexion();
-        String log = Conexion.login;
-        String idd = Representante_Legal.id;
+
+        Conexion c = new Conexion();
         
         try{
             String usuario = txtUser.getText();

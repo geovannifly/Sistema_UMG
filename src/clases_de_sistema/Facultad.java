@@ -1,74 +1,74 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 package clases_de_sistema;
 
 
-import java.sql.Connection;
-import java.sql.SQLException;
-/**
- *
- * @author olgt1
- */
 public class Facultad {
-    private String id;
-    private String nombre;
-    private Curso cursos[];
-    private Connection miconexion;
-
-    public String getId() {
-        return id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public Curso[] getCursos() {
-        return cursos;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCursos(Curso[] cursos) {
-        this.cursos = cursos;
+    
+    private String idrepresentante;
+    private String nombrerepresentante;
+    private String idfacultad;
+    private String nombrefacultad;
+    private String nombrefacultadAnterior;
+    
+    
+    public Facultad(){
+    
     }
     
-    public void eliminar(){
-        this.id = null;
-        this.nombre = null;
+    public Facultad(String idFacultad, String nombreFacultad){
+        this.idfacultad = idFacultad;
+        this.nombrefacultad = nombreFacultad;
+        
     }
     
-    public void CrearFacultadDB(/*parametros formulario*/){
-        //crear mi inserciion en la DB 
-        try {
-            miconexion = linkDB.getConnection();
-            if (miconexion != null){
-                //insercion
-                
-                
-                
-                
-                miconexion.close();
-            }
-            
-        } catch (SQLException e) {
-            
-            //alternativa
-        }
-        
-        
-        
+    public String getIdrepresentante() {
+        return idrepresentante;
+    }
+
+    public void setIdrepresentante(String idrepresentante) {
+        this.idrepresentante = idrepresentante;
+    }
+
+    public String getNombrerepresentante() {
+        return nombrerepresentante;
+    }
+
+    public void setNombrerepresentante(String nombrerepresentante) {
+        this.nombrerepresentante = nombrerepresentante;
+    }
+
+    public String getIdfacultad() {
+        return idfacultad;
+    }
+
+    public void setIdfacultad(String idfacultad) {
+        this.idfacultad = idfacultad;
+    }
+
+    public String getNombrefacultad() {
+        return nombrefacultad;
+    }
+
+    public void setNombrefacultad(String nombrefacultad) {
+        this.nombrefacultad = nombrefacultad;
+    }
+
+    public String getNombrefacultadAnterior() {
+        return nombrefacultadAnterior;
+    }
+
+    public void setNombrefacultadAnterior(String nombrefacultadAnterior) {
+        this.nombrefacultadAnterior = nombrefacultadAnterior;
+    }
+   
+    @Override
+    public String toString(){
+        return idfacultad + " - " + nombrefacultad;
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        return this.idfacultad.equals(((Facultad) obj).idfacultad);
     }
     
 }

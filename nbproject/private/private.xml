@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/clases_de_sistema/Facultad.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/Modelo/MO_Facultad.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/desktop_login/Login.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/clases_de_sistema/cls_jornadaBO.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/clases_de_sistema/linkDB.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/clases_de_sistema/cls_estudiantesDAO.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/formularios/Formulario_Admin_Cursos.java</file>
+            <file>file:/C:/Users/fly10/Documents/GitHub/Sistema_UMG/src/formularios/Frm_Facultad.java</file>
+        </group>
     </open-files>
 </project-private>
